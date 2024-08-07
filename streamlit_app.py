@@ -19,3 +19,5 @@ with st.expander('Data visualisation'):
   # "bill_length_mm","bill_depth_mm","flipper_length_mm","body_mass_g"
   st.scatter_chart(data=df , x="bill_length_mm", y="body_mass_g", x_label="bill length",
                    y_label="body mass", color="species")
+  st.line_chart(data = df,  x="bill_length_mm", y="body_mass_g", x_label="bill length",
+                   y_label="body mass", color="species")
