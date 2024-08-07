@@ -21,3 +21,6 @@ with st.expander('Data visualisation'):
                    y_label="body mass", color="species")
   st.line_chart(data = df,  x="bill_length_mm", y="body_mass_g", x_label="bill length",
                    y_label="body mass", color="species")
+# Data preparation
+with st.sidebar:
+  st.header('Input features')
