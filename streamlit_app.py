@@ -1,4 +1,4 @@
-import streamlit as st
+=import streamlit as st
 import pandas as pd
 
 st.title('🤖Mchine learning App')
@@ -37,6 +37,6 @@ with st.sidebar:
           'flipper_length_mm':flipper_length_mm,
           'body_mass_g':body_mass_g,
           'gender':gender}
-  input_df = pd.DataFrame(data, axis=0)
+  input_df = pd.DataFrame(data, index=[0])
 
 input_df
