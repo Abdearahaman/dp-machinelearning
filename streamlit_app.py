@@ -79,5 +79,6 @@ clf.fit(X, y)
 # apply to some prediction
 prediction = clf.predict(input_raw)
 prediction_proba = clf.predict_proba(input_raw)
-
-prediction_proba
+df_prediction_proba = pd.DataFrame(prediction_proba)
+df_prediction_proba.columns = ['Adelie','Chinstrap','Gentoo']
+df_prediction_proba
