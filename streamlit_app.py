@@ -78,6 +78,6 @@ clf.fit(X, y)
 
 # apply to some prediction
 prediction = clf.predict(input_raw)
-predction_proba = cf.predict_proba(input_raw)
+predction_proba = clf.predict_proba(input_raw)
 
 prediction_proba
