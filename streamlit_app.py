@@ -52,6 +52,7 @@ with st.expander('Input features'):
 # Encode
 encode = ['island','sex']
 df_penguins = pd.get_dummies(input_penguins, prefix=encode)
+X = df_penguins[1:]
 input_raw = df_penguins[:1]
 
 # encode y
@@ -66,7 +67,17 @@ y = y_raw.apply(target_encode)
 
 
 with st.expander('Data Preparation'):
-  st.write('**Encoded Input penguin (X)**')
+  st.write('**Encoded X (Input penguin)**')
   input_raw
   st.write('**Encoded y**')
   y
+
+# Model training and inference
+clf = RandomForestClassifier()
+clf.fit(X, y)
+
+# apply to some prediction
+prediction = clf.predict(input_raw)
+predction_proba = cf.predict_proba(input_raw)
+
+prediction_proba
