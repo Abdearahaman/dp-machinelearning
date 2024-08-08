@@ -1,7 +1,7 @@
 from sklearn.ensemble import RandomForestClassifier
 import streamlit as st
 import pandas as pd
-
+import numpy as np
 st.title('🤖Mchine learning App')
 
 st.info('this app is building a machine learning app')
@@ -81,4 +81,10 @@ prediction = clf.predict(input_raw)
 prediction_proba = clf.predict_proba(input_raw)
 df_prediction_proba = pd.DataFrame(prediction_proba)
 df_prediction_proba.columns = ['Adelie','Chinstrap','Gentoo']
+
+
+# Display prediction species
+st.subheader('Predicted Species:')
 df_prediction_proba
+penguins_species = np.array(['Adelie','Chinstrap','Gentoo'])
+st.success(str(penguins_species[prediction][0]))
