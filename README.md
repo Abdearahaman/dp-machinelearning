@@ -1,7 +1,5 @@
 # 🤖 Machine learning App 
-```
-⬆️ (Replace above with your app's name)
-```
+
 
 This is a machine learning app
 
